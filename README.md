@@ -32,18 +32,6 @@
    ```bash
    chmod +x run.py
    ```
-
-4. (Optional) Set up GPG for encryption:
-   - Ensure GPG is installed on your system.
-   - Generate a GPG key pair if you don't already have one:
-     ```bash
-     gpg --full-generate-key
-     ```
-   - Export your public key:
-     ```bash
-     gpg --export --armor your-email@example.com > public-key.pem
-     ```
-
 ## Usage
 
 ### Generate Passwords
