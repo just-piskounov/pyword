@@ -11,26 +11,26 @@ def gen_pw(amount, n, u, l, s, total_length=None):
     if total_length:
         for _ in range(amount):
             passwords.append("".join([secrets.choice(string.digits + string.ascii_letters + string.punctuation) for _ in range(total_length)]))
-        return passwords
     
     else:
-        password = []
-        for _ in range(n):
-            password.append(secrets.choice(string.digits))
+        for _ in range(amount):
+            password = []
+            for _ in range(n):
+                password.append(secrets.choice(string.digits))
 
-        for _ in range(u):
-            password.append(secrets.choice(string.ascii_uppercase))
+            for _ in range(u):
+                password.append(secrets.choice(string.ascii_uppercase))
 
-        for _ in range(l):
-            password.append(secrets.choice(string.ascii_lowercase))
+            for _ in range(l):
+                password.append(secrets.choice(string.ascii_lowercase))
 
-        for _ in range(s):
-            password.append(secrets.choice(string.punctuation))
+            for _ in range(s):
+                password.append(secrets.choice(string.punctuation))
 
-        password = random.shuffle(password)
-        passwords.append("".join(password))
+            random.shuffle(password)
+            passwords.append("".join(password))
 
-        return passwords
+    return passwords
 
 def save_pw_file(file, passwords):
     """
