@@ -19,7 +19,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pyword.git
+   git clone https://github.com/just-piskounov/pyword.git
    cd pyword
    ```
 
